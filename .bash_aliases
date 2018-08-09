@@ -15,6 +15,7 @@ alias ls='ls -A --color="auto"'
 alias ll='ls -Al'
 alias ..='cd ..'
 alias rm='rm -r'
+alias wget='wget --content-disposition'  # (Usually) corrects filenames
 
 # Remove all except $1. Brackets must be used for inputs with special chars
 rmx() {
