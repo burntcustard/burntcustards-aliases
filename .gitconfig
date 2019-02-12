@@ -1,0 +1,11 @@
+
+# This is Git's per-user configuration file.
+[user]
+        name = burntcustard
+        email = burntcustard@gmail.com
+[alias]
+        co = checkout
+        ca = commit -am
+        branches = for-each-ref --sort=-committerdate refs/heads/ --format='%(authordate:short) %(color:red)%(objectname:short) %(color:yellow)%(refn$
+
+
