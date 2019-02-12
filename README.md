@@ -2,12 +2,17 @@
 
 A `.bash_aliases` file that includes a bunch of shortcuts, workarounds, and anything else I can shove in it.
 
+
+Also includes a .gitconfig file with my user settings and some git aliases.
+
+
 ### Linux (or bash shell on Win10) install
 Download the aliases file to your `$HOME` directory (short URL via [my website](http://burnt.io)):
 ```
 $ wget -O .bash_aliases aliases.burnt.io
 ```
 Close and repoen the terminal window, or run `exec bash`, and you're done!
+
 
 ### macOS install
 TODO: Mac instructions.
