@@ -22,6 +22,11 @@ rmx() {
   rm -rv !($1)
 }
 
+# Move the contents out of subfolder into current dir
+mvout() {
+  cp -r $@. . && rm $@
+}
+
 # Repeat the following text (basically just echo)
 say() {
   echo $@
