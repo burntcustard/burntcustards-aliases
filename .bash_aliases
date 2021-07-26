@@ -66,6 +66,16 @@ unzip() {
   fi
 }
 
+# Rename all files in the current dir to lowercase
+lowercase() {
+  for i in $( ls | grep [A-Z] ); do mv -i $i `echo $i | tr 'A-Z' 'a-z'`; done
+}
+
+# Rename files in the current dir to lowercase, hypen-not-underscore
+kebabcase() {
+  for i in $( ls | grep [A-Z] ); do mv -i $i `echo $i | tr 'A-Z' 'a-z' | tr '_' '-'`; done
+}
+
 
 ########
 # URLs #
@@ -95,5 +105,12 @@ alias wifi='sudo nano /etc/wpa_supplicant/wpa_supplicant.conf'
 # Open custom keyboard shortcust file & key event viewer on Mac
 alias keymods='brackets ~/.config/karabiner/karabiner.json'
 alias keyevents='open /Applications/Karabiner-EventViewer.app/'
+
+# PS1 (if supported & git installed)
+export PS1="\[\033[38;5;11m\]John@\h\[$(tput sgr0)\]\[\033[38;5;15m\]:\[$(tput sgr0)\]\[\033[38;5;14m\]\w\[$(tput sgr0)\]\[\033[95m\]\`__git_ps1\`\[\033[38;5;15m\]\$ \[$(tput sgr0)\]"
+
+# Prefer nano for text editing
+export EDITOR=nano
+
 
 
